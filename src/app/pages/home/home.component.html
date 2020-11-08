@@ -1,0 +1,7 @@
+<button *ngFor="let qnaType of qnaTypes | keyvalue"
+        (click)="selectCategory(qnaType.value)"> {{ buttonTypes[qnaType.value]}}
+</button>
+
+<app-table [list]="viewList">
+
+</app-table>
