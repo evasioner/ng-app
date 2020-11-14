@@ -33,3 +33,10 @@
     </div>
   </div>
 </form>
+
+<select [(ngModel)]="selectedCategory" (change)="selectCategory()">
+  <option *ngFor="let type of qnaTypes"
+          [value]="type.code">
+    {{ type.name }}
+  </option>
+</select>

@@ -18,6 +18,7 @@ export class TestComponent implements OnInit {
   code: any;
   categoryCode: any;
   imageSrc: any;
+  selectedCategory: string = 'ALL';
   uploadFiles: any;
 
   fileName: '';
@@ -127,6 +128,34 @@ export class TestComponent implements OnInit {
     }
     console.log(rqInfo, 1232132131);
   }
+
+
+  public selectCategory() {
+
+    console.log('click', this.selectedCategory);
+
+    // this.code = code;
+    // this.viewModel.consulting.list = [];
+
+    // if (code === 'ALL') {
+    //   this.viewModel.consulting.list = this.sampleList;
+    //
+    // } else {
+    //   this.viewModel.consulting.list = this.convertedList[code] || [];
+    //
+    // }
+    // console.log(this.viewModel.consulting.list, '====this.viewModel.consulting.list');
+    // this.typeCodeCount = this.viewModel.consulting.list.length;
+
+  }
+
+  qnaTypes = [
+    {name: 'ALL', code: 'ALL'},
+    {name: 'IC01', code: 'IC01'},
+    {name: 'IC02', code: 'IC02'},
+    {name: 'IC03', code: 'IC03'},
+    {name: 'IC04', code: 'IC04'}
+  ];
 
 
   mainFormCreate() {
