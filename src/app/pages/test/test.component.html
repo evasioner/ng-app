@@ -1,0 +1,35 @@
+<!-- Modal -->
+<form [formGroup]="mainForm">
+  <div>
+    <div>
+      <div class="input-file line">
+        <div class="file-name">
+          <span *ngIf="fileName === ''" class="text place-holder">파일을 선택하세요</span>
+          <span *ngIf="fileName !== ''" class="text">{{fileName}}</span>
+          <a (click)="deleteFile()" class="icon sm input-delete2">삭제</a>
+        </div>
+        <!-- 파일 선택 버튼을 눌러 파일을 선택하면 파일 이름이 .text 에 들어가고 삭제 버튼을 누르면 파일이 날라간다. -->
+        <ng-container formArrayName="selectFiles">
+          <ng-container *ngFor="let selectFile of selectFiles.controls; index as i; ">
+            <label class="input-file-label">
+              파일 선택 <input type="file" accept="image/*"
+                           (change)="onFileChange(fileInput.files, i)" #fileInput
+                           class="file-hidden">
+            </label>
+            <a (click)="deleteClick(i)">닫기</a>
+          </ng-container>
+        </ng-container>
+      </div>
+    </div>
+    <div class="row">
+      <div class="btn-group both">
+        <button (click)="addClick()" class="btn lg dash-line" role="button"><span class="icon sm plus3">추가</span>
+        </button>
+        <button (click)="deleteClick()" class="btn lg dash-line" role="button"><span
+          class="icon sm minus3">삭제</span></button>
+        <button (click)="write()" class="btn lg dash-line" role="button"><span
+          class="icon sm minus3">작성</span></button>
+      </div>
+    </div>
+  </div>
+</form>

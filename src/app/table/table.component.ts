@@ -12,15 +12,17 @@ export class TableComponent implements OnInit {
   settings = {
     'IC01': {
       'reservation-title': {
-        'icon': 'fight2'
+        'icon': 'icon sm fight2'
       }
     },
     'IC02': {
-      'reservation-title': 'hotel4'
+      'reservation-title': {
+        'icon': 'icon sm hotel4'
+      }
     },
     'IC03': {
       'reservation-title': {
-        'icon': 'rentcar3'
+        'icon': 'icon sm rentcar3'
       }
     },
   };

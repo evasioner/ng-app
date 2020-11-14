@@ -2,7 +2,7 @@
   <!-- 항공 -->
   <div>
     <div class="reservation-title">
-      <span [ngClass]="'icon sm ' + settings[item?.consultingCategoryCode['reservation-title']]"></span>
+      <span [ngClass]="settings[item.consultingCategoryCode]['reservation-title']['icon']"></span>
       <span class=" text">{{item?.bookingItemCode}}</span>
       <span class="label sm type1">문의접수</span>
     </div>

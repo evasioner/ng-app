@@ -8,6 +8,7 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {ReactiveFormsModule} from '@angular/forms';
 import {HomeComponent} from './pages/home/home.component';
 import { TableComponent } from './table/table.component';
+import { TestComponent } from './pages/test/test.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { TableComponent } from './table/table.component';
     NavbarComponent,
     FooterComponent,
     HomeComponent,
-    TableComponent
+    TableComponent,
+    TestComponent
   ],
   imports: [
     BrowserModule,

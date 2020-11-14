@@ -57,10 +57,19 @@ export class HomeComponent implements OnInit {
         'questionDetail': 'bbbb',
         'requestDatetime': 'bbbb'
       },
+      {
+        'consultingCategoryCode': 'IC02',
+        'questionTitle': 'bbbb',
+        'travelFromDate': 'bbbb',
+        'boardMasterSeq': 'bbbb',
+        'questionDetail': 'bbbb',
+        'requestDatetime': 'bbbb'
+      },
     ];
     let tmp = [];
     this.sampleList.forEach((item) => {
-      tmp[item.consultingCategoryCode] = item;
+      tmp[item.consultingCategoryCode] = tmp[item.consultingCategoryCode] || [];
+      tmp[item.consultingCategoryCode].push(item);
     });
     this.viewList = this.sampleList;
     this.convertedList = tmp;
